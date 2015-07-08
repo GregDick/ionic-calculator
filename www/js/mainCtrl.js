@@ -3,8 +3,14 @@ angular
 .controller('MainCtrl', ['$scope', function($scope){
   $scope.message = 'hello';
 
-  $scope.display = 0;
+  var number;
 
+  $scope.viewSpace;
+
+//functions for number keys
+  $scope.set = function(num){
+    $scope.viewSpace = num;
+  }
 
 
 

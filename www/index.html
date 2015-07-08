@@ -31,7 +31,7 @@
       <ion-content>
         <div class='container'>
           <div class="row view-space">
-          {{display}}
+          <p>{{viewSpace}}</p>
           </div>
           <div class="button-bar">
             <button class='button button-positive button-outline'>x<sup>2</sup></button>
@@ -46,25 +46,25 @@
             <button class='button button-positive button-outline'>tan<sup>-1</sup></button>
           </div>
           <div class="button-bar">
-            <button class='button button-outline'>1</button>
-            <button class='button button-outline'>2</button>
-            <button class='button button-outline'>3</button>
+            <button class='button button-outline' ng-click='set(1)'>1</button>
+            <button class='button button-outline' ng-click='set(2)'>2</button>
+            <button class='button button-outline' ng-click='set(3)'>3</button>
             <button class='button button-calm button-outline'>&divide;</button>
           </div>
           <div class="button-bar">
-            <button class='button button-outline'>4</button>
-            <button class='button button-outline'>5</button>
-            <button class='button button-outline'>6</button>
+            <button class='button button-outline' ng-click='set(4)'>4</button>
+            <button class='button button-outline' ng-click='set(5)'>5</button>
+            <button class='button button-outline' ng-click='set(6)'>6</button>
             <button class='button button-calm button-outline'>x</button>
           </div>
           <div class="button-bar">
-            <button class='button button-outline'>7</button>
-            <button class='button button-outline'>8</button>
-            <button class='button button-outline'>9</button>
+            <button class='button button-outline' ng-click='set(7)'>7</button>
+            <button class='button button-outline' ng-click='set(8)'>8</button>
+            <button class='button button-outline' ng-click='set(9)'>9</button>
             <button class='button button-calm button-outline'>+</button>
           </div>
           <div class="button-bar">
-            <button class='button button-outline'>0</button>
+            <button class='button button-outline' ng-click='set(0)'>0</button>
             <button class='button button-outline'>.</button>
             <button class="button button-outline disabled"></button>
             <button class='button button-calm button-outline'>-</button>
