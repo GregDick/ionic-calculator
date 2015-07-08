@@ -20,14 +20,60 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter"  ng-controller='MainCtrl'>
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">CALCULATOR</h1>
       </ion-header-bar>
       <ion-content>
+        <div class='container'>
+          <div class="row view-space">
+          {{display}}
+          </div>
+          <div class="button-bar">
+            <button class='button button-positive button-outline'>x<sup>2</sup></button>
+            <button class='button button-positive button-outline'>sin</button>
+            <button class='button button-positive button-outline'>cos</button>
+            <button class='button button-positive button-outline'>tan</button>
+          </div>
+          <div class="button-bar">
+            <button class='button button-positive button-outline'>&radic;<span class='sqrt'>x</span></button>
+            <button class='button button-positive button-outline'>sin<sup>-1</sup></button>
+            <button class='button button-positive button-outline'>cos<sup>-1</sup></button>
+            <button class='button button-positive button-outline'>tan<sup>-1</sup></button>
+          </div>
+          <div class="button-bar">
+            <button class='button button-outline'>1</button>
+            <button class='button button-outline'>2</button>
+            <button class='button button-outline'>3</button>
+            <button class='button button-calm button-outline'>&divide;</button>
+          </div>
+          <div class="button-bar">
+            <button class='button button-outline'>4</button>
+            <button class='button button-outline'>5</button>
+            <button class='button button-outline'>6</button>
+            <button class='button button-calm button-outline'>x</button>
+          </div>
+          <div class="button-bar">
+            <button class='button button-outline'>7</button>
+            <button class='button button-outline'>8</button>
+            <button class='button button-outline'>9</button>
+            <button class='button button-calm button-outline'>+</button>
+          </div>
+          <div class="button-bar">
+            <button class='button button-outline'>0</button>
+            <button class='button button-outline'>.</button>
+            <button class="button button-outline disabled"></button>
+            <button class='button button-calm button-outline'>-</button>
+          </div>
+          <div class="button-bar">
+            <button class='button button-outline button-assertive'>outline</button>
+            <button class="button button-outline button-balanced">Enter</button>
+          </div>
+        </div>
       </ion-content>
     </ion-pane>
   </body>

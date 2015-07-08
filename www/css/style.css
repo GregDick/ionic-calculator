@@ -1,1 +1,13 @@
 /* Empty. Add your own CSS if you like */
+.view-space{
+  height: 57px;
+  border: 1px solid gray;
+}
+
+.sqrt{
+  text-decoration: overline;
+}
+
+.button{
+  padding: 5px !important;
+}
