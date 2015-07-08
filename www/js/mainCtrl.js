@@ -17,24 +17,69 @@ angular
 
 //addition function
   $scope.add = function(viewSpace){
-    $scope.addition = true;
-    $scope.values.push(parseInt(viewSpace));
-    number.length = 0;
+    if(!$scope.operation){
+      $scope.values.push(viewSpace * 1);
+      number.length = 0;
+    }
+    $scope.operation = 'addition';
+  }
+
+//subtraction function
+  $scope.sub = function(viewSpace){
+    if(!$scope.operation){
+      $scope.values.push(viewSpace * 1);
+      number.length = 0;
+    }
+    $scope.operation = 'subtraction';
+  }
+
+//multiplication function
+  $scope.multiply = function(viewSpace){
+    if(!$scope.operation){
+      $scope.values.push(viewSpace * 1);
+      number.length = 0;
+    }
+    $scope.operation = 'multiplication';
+  }
+
+//division function
+  $scope.divide = function(viewSpace){
+    if(!$scope.operation){
+      $scope.values.push(viewSpace * 1);
+      number.length = 0;
+    }
+    $scope.operation = 'division';
   }
 
 //enter function
   $scope.execute = function(viewSpace){
-    $scope.values.push(parseInt(viewSpace));
+    $scope.values.push(viewSpace * 1);
     number.length = 0;
-    if($scope.addition === true){
-      var sum = 0;
-      $scope.values.forEach(function(value){
-        return sum += value;
-      })
-      $scope.viewSpace = sum;
-      $scope.addition = false;
+    //do addition
+    if($scope.operation === 'addition'){
+      $scope.viewSpace = $scope.values[0] + $scope.values[1];
+      $scope.operation = '';
       $scope.values.length = 0;
     }
+    //do subtraction
+    else if($scope.operation === 'subtraction'){
+      $scope.viewSpace = $scope.values[0] - $scope.values[1];
+      $scope.operation = '';
+      $scope.values.length = 0;
+    }
+    //do multiplication
+    else if($scope.operation === 'multiplication'){
+      $scope.viewSpace = $scope.values[0] * $scope.values[1];
+      $scope.operation = '';
+      $scope.values.length = 0;
+    }
+    //do division
+    else if($scope.operation === 'division'){
+      $scope.viewSpace = $scope.values[0] / $scope.values[1];
+      $scope.operation = '';
+      $scope.values.length = 0;
+    }
+
   }
 
 //clear function
@@ -42,6 +87,7 @@ angular
     number.length = 0;
     $scope.values.length = 0;
     $scope.viewSpace = 0;
+    $scope.operation = '';
   }
 
 

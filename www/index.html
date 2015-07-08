@@ -49,13 +49,13 @@
             <button class='button button-outline' ng-click='set(1)'>1</button>
             <button class='button button-outline' ng-click='set(2)'>2</button>
             <button class='button button-outline' ng-click='set(3)'>3</button>
-            <button class='button button-calm button-outline'>&divide;</button>
+            <button class='button button-calm button-outline' ng-click='divide(viewSpace)'>&divide;</button>
           </div>
           <div class="button-bar">
             <button class='button button-outline' ng-click='set(4)'>4</button>
             <button class='button button-outline' ng-click='set(5)'>5</button>
             <button class='button button-outline' ng-click='set(6)'>6</button>
-            <button class='button button-calm button-outline'>x</button>
+            <button class='button button-calm button-outline' ng-click='multiply(viewSpace)'>x</button>
           </div>
           <div class="button-bar">
             <button class='button button-outline' ng-click='set(7)'>7</button>
@@ -67,7 +67,7 @@
             <button class='button button-outline' ng-click='set(0)'>0</button>
             <button class='button button-outline'>.</button>
             <button class="button button-outline disabled"></button>
-            <button class='button button-calm button-outline'>-</button>
+            <button class='button button-calm button-outline' ng-click='sub(viewSpace)'>-</button>
           </div>
           <div class="button-bar">
             <button class='button button-outline button-assertive' ng-click='clear()'>Clear</button>
