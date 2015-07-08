@@ -9,10 +9,27 @@ angular
 
   $scope.viewSpace = 0;
 
+
+  if(($scope.viewSpace + '').indexOf('.')=== -1){
+    document.querySelector('.decimal').classList.remove('disabled');
+  }
+
+
 //functions for number keys
   $scope.set = function(digit){
-    number.push(digit);
+    if($scope.negative){
+      number.push(digit * -1);
+    }else{
+      number.push(digit);
+    }
     $scope.viewSpace = number.join('');
+    //only allow one decimal point in viewSpace
+    if(($scope.viewSpace + '').indexOf('.')=== -1){
+      document.querySelector('.decimal').classList.remove('disabled');
+    }else{
+      document.querySelector('.decimal').classList.add('disabled');
+    }
+    $scope.negative = false;
   }
 
 //addition function
@@ -22,6 +39,7 @@ angular
       number.length = 0;
     }
     $scope.operation = 'addition';
+    $scope.negative = false;
   }
 
 //subtraction function
@@ -31,6 +49,7 @@ angular
       number.length = 0;
     }
     $scope.operation = 'subtraction';
+    $scope.negative = false;
   }
 
 //multiplication function
@@ -40,6 +59,7 @@ angular
       number.length = 0;
     }
     $scope.operation = 'multiplication';
+    $scope.negative = false;
   }
 
 //division function
@@ -49,6 +69,7 @@ angular
       number.length = 0;
     }
     $scope.operation = 'division';
+    $scope.negative = false;
   }
 
 //square function
@@ -91,6 +112,11 @@ angular
     $scope.viewSpace = Math.atan(viewSpace);
   }
 
+//negate function
+  $scope.negate = function(viewSpace){
+    $scope.viewSpace = viewSpace * -1;
+    $scope.negative = $scope.negative===true ? false : true;
+  }
 
 //enter function
   $scope.execute = function(viewSpace){
@@ -129,6 +155,7 @@ angular
     $scope.values.length = 0;
     $scope.viewSpace = 0;
     $scope.operation = '';
+    $scope.negative = false;
   }
 
 
