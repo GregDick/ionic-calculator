@@ -61,7 +61,7 @@
             <button class='button button-outline' ng-click='set(7)'>7</button>
             <button class='button button-outline' ng-click='set(8)'>8</button>
             <button class='button button-outline' ng-click='set(9)'>9</button>
-            <button class='button button-calm button-outline'>+</button>
+            <button class='button button-calm button-outline' ng-click='add(viewSpace)'>+</button>
           </div>
           <div class="button-bar">
             <button class='button button-outline' ng-click='set(0)'>0</button>
@@ -70,8 +70,8 @@
             <button class='button button-calm button-outline'>-</button>
           </div>
           <div class="button-bar">
-            <button class='button button-outline button-assertive'>outline</button>
-            <button class="button button-outline button-balanced">Enter</button>
+            <button class='button button-outline button-assertive' ng-click='clear()'>Clear</button>
+            <button class="button button-outline button-balanced" ng-click='execute(viewSpace)'>Enter</button>
           </div>
         </div>
       </ion-content>
