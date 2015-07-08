@@ -51,6 +51,47 @@ angular
     $scope.operation = 'division';
   }
 
+//square function
+  $scope.square = function(viewSpace){
+    $scope.viewSpace = viewSpace * viewSpace;
+  }
+
+//square root function
+  $scope.sqrt = function(viewSpace){
+    $scope.viewSpace = Math.sqrt(viewSpace);
+  }
+
+//sin function
+  $scope.sin = function(viewSpace){
+    $scope.viewSpace = Math.sin(viewSpace);
+  }
+
+//cos function
+  $scope.cos = function(viewSpace){
+    $scope.viewSpace = Math.cos(viewSpace);
+  }
+
+//tan function
+  $scope.tan = function(viewSpace){
+    $scope.viewSpace = Math.tan(viewSpace);
+  }
+
+//arcsin function
+  $scope.asin = function(viewSpace){
+    $scope.viewSpace = Math.asin(viewSpace);
+  }
+
+//arccos function
+  $scope.acos = function(viewSpace){
+    $scope.viewSpace = Math.acos(viewSpace);
+  }
+
+//arctan function
+  $scope.atan = function(viewSpace){
+    $scope.viewSpace = Math.atan(viewSpace);
+  }
+
+
 //enter function
   $scope.execute = function(viewSpace){
     $scope.values.push(viewSpace * 1);

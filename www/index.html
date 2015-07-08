@@ -34,16 +34,16 @@
           <p>{{viewSpace}}</p>
           </div>
           <div class="button-bar">
-            <button class='button button-positive button-outline'>x<sup>2</sup></button>
-            <button class='button button-positive button-outline'>sin</button>
-            <button class='button button-positive button-outline'>cos</button>
-            <button class='button button-positive button-outline'>tan</button>
+            <button class='button button-positive button-outline' ng-click='square(viewSpace)'>x<sup>2</sup></button>
+            <button class='button button-positive button-outline' ng-click='sin(viewSpace)'>sin</button>
+            <button class='button button-positive button-outline' ng-click='cos(viewSpace)'>cos</button>
+            <button class='button button-positive button-outline' ng-click='tan(viewSpace)'>tan</button>
           </div>
           <div class="button-bar">
-            <button class='button button-positive button-outline'>&radic;<span class='sqrt'>x</span></button>
-            <button class='button button-positive button-outline'>sin<sup>-1</sup></button>
-            <button class='button button-positive button-outline'>cos<sup>-1</sup></button>
-            <button class='button button-positive button-outline'>tan<sup>-1</sup></button>
+            <button class='button button-positive button-outline' ng-click='sqrt(viewSpace)'>&radic;<span class='sqrt'>x</span></button>
+            <button class='button button-positive button-outline' ng-click='asin(viewSpace)'>sin<sup>-1</sup></button>
+            <button class='button button-positive button-outline' ng-click='acos(viewSpace)'>cos<sup>-1</sup></button>
+            <button class='button button-positive button-outline' ng-click='atan(viewSpace)'>tan<sup>-1</sup></button>
           </div>
           <div class="button-bar">
             <button class='button button-outline' ng-click='set(1)'>1</button>
@@ -65,7 +65,7 @@
           </div>
           <div class="button-bar">
             <button class='button button-outline' ng-click='set(0)'>0</button>
-            <button class='button button-outline'>.</button>
+            <button class='button button-outline' ng-click='set(".")'>.</button>
             <button class="button button-outline disabled"></button>
             <button class='button button-calm button-outline' ng-click='sub(viewSpace)'>-</button>
           </div>
