@@ -9,7 +9,7 @@ angular
 
   $scope.viewSpace = 0;
 
-
+  //only allow one decimal point in viewSpace
   if(($scope.viewSpace + '').indexOf('.')=== -1){
     document.querySelector('.decimal').classList.remove('disabled');
   }
